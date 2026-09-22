@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="sisonke_primary">#1B5E20</color>
+    <color name="sisonke_primary_dark">#0D3B13</color>
+    <color name="sisonke_secondary">#FFB300</color>
+    <color name="sisonke_background">#F7F8F6</color>
+    <color name="sisonke_white">#FFFFFF</color>
+    <color name="sisonke_black">#111111</color>
+    <color name="sisonke_grey">#777777</color>
+    <color name="sisonke_red">#D32F2F</color>
+
+</resources>

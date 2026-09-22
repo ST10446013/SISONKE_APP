@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "410726276155",
+    "project_id": "sisonke-8e84a",
+    "storage_bucket": "sisonke-8e84a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410726276155:android:e5f67c522a06ebb3fd501e",
+        "android_client_info": {
+          "package_name": "com.example.sisonke_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410726276155-bh8pkqo1b7ao7n792u5hoos2cmgvsct5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6391JuF1un8t9-OEOeTUrIhpGAJsJvws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410726276155-bh8pkqo1b7ao7n792u5hoos2cmgvsct5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

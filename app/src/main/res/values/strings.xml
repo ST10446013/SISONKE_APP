@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sisonke</string>
+
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="full_name">Full Name</string>
+
+    <string name="dashboard">Dashboard</string>
+    <string name="report_incident">Report Incident</string>
+    <string name="crime_map">Crime Map</string>
+    <string name="emergency">Emergency</string>
+    <string name="municipal">Municipal</string>
+    <string name="settings">Settings</string>
+
+    <string name="create_account">Create Account</string>
+    <string name="forgot_password">Forgot Password?</string>
+
+</resources>
