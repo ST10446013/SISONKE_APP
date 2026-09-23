@@ -1,8 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.SISONKE_APP" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/sisonke_primary</item>
+        <item name="colorPrimaryVariant">@color/sisonke_primary_dark</item>
+        <item name="colorSecondary">@color/sisonke_secondary</item>
+        <item name="android:statusBarColor">@color/sisonke_navy</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/sisonke_white</item>
     </style>
 
     <style name="Theme.SISONKE_APP" parent="Base.Theme.SISONKE_APP" />

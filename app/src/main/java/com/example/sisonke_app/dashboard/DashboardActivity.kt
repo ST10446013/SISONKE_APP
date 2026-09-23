@@ -50,7 +50,7 @@ class DashboardActivity : AppCompatActivity() {
                 }
         }
 
-        findViewById<Button>(R.id.btnSettings).setOnClickListener {
+        findViewById<android.view.View>(R.id.btnSettings).setOnClickListener {
 
             startActivity(
                 Intent(
@@ -60,7 +60,7 @@ class DashboardActivity : AppCompatActivity() {
             )
         }
 
-        findViewById<Button>(R.id.btnReportIncident).setOnClickListener {
+        findViewById<android.view.View>(R.id.btnReportIncident).setOnClickListener {
 
             startActivity(
                 Intent(
@@ -70,7 +70,7 @@ class DashboardActivity : AppCompatActivity() {
             )
         }
 
-        findViewById<Button>(R.id.btnCrimeMap).setOnClickListener {
+        findViewById<android.view.View>(R.id.btnCrimeMap).setOnClickListener {
 
             startActivity(
                 Intent(
@@ -80,7 +80,7 @@ class DashboardActivity : AppCompatActivity() {
             )
         }
 
-        findViewById<Button>(R.id.btnEmergency).setOnClickListener {
+        findViewById<android.view.View>(R.id.btnEmergency).setOnClickListener {
 
             startActivity(
                 Intent(
@@ -90,7 +90,7 @@ class DashboardActivity : AppCompatActivity() {
             )
         }
 
-        findViewById<Button>(R.id.btnMunicipal).setOnClickListener {
+        findViewById<android.view.View>(R.id.btnMunicipal).setOnClickListener {
 
             startActivity(
                 Intent(

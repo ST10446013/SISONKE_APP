@@ -4,76 +4,135 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/sisonke_background">
+    android:fillViewport="true"
+    android:background="@color/sisonke_white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:gravity="center_horizontal"
         android:padding="24dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="Create Account"
-            android:textColor="@color/sisonke_primary"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
-        <EditText
-            android:id="@+id/etName"
+        <!-- Card -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:hint="Full Name"
-            android:inputType="textPersonName"
-            android:padding="16dp" />
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_rounded"
+            android:elevation="4dp"
+            android:padding="24dp">
 
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:padding="16dp" />
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_launcher_foreground"
+                android:contentDescription="@string/app_name" />
 
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="16dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:text="CREATE ACCOUNT"
+                android:textColor="@color/sisonke_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/etConfirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:padding="16dp" />
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_input_field"
+                android:gravity="center_vertical"
+                android:hint="Enter Full Name"
+                android:inputType="textPersonName"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColorHint="@color/sisonke_grey"
+                android:textSize="14sp"
+                android:singleLine="true" />
 
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="CREATE ACCOUNT"
-            android:textAllCaps="false" />
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_input_field"
+                android:gravity="center_vertical"
+                android:hint="Enter Email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColorHint="@color/sisonke_grey"
+                android:textSize="14sp"
+                android:singleLine="true" />
 
-        <TextView
-            android:id="@+id/tvLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="25dp"
-            android:text="Already have an account? Login"
-            android:textColor="@color/sisonke_primary"
-            android:textSize="16sp" />
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_input_field"
+                android:gravity="center_vertical"
+                android:hint="Create Password"
+                android:inputType="textPassword"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColorHint="@color/sisonke_grey"
+                android:textSize="14sp"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_input_field"
+                android:gravity="center_vertical"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColorHint="@color/sisonke_grey"
+                android:textSize="14sp"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_button_primary"
+                android:text="CREATE ACCOUNT"
+                android:textAllCaps="true"
+                android:textColor="@color/sisonke_white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="Already have an account? Login"
+                android:textColor="@color/sisonke_grey"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.4" />
 
     </LinearLayout>
 

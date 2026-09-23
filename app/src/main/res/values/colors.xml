@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Core brand -->
     <color name="sisonke_primary">#1B5E20</color>
     <color name="sisonke_primary_dark">#0D3B13</color>
+    <color name="sisonke_primary_light">#2E7D32</color>
     <color name="sisonke_secondary">#FFB300</color>
     <color name="sisonke_background">#F7F8F6</color>
     <color name="sisonke_white">#FFFFFF</color>
     <color name="sisonke_black">#111111</color>
     <color name="sisonke_grey">#777777</color>
+    <color name="sisonke_grey_light">#EFEFEF</color>
+    <color name="sisonke_border">#E0E0E0</color>
     <color name="sisonke_red">#D32F2F</color>
+
+    <!-- App bar / nav (dark navy from design) -->
+    <color name="sisonke_navy">#0D2438</color>
+    <color name="sisonke_navy_dark">#081726</color>
+
+    <!-- Quick action tile colors -->
+    <color name="tile_orange">#E8622C</color>
+    <color name="tile_green">#1B5E20</color>
+    <color name="tile_red">#D32F2F</color>
+    <color name="tile_blue">#1565C0</color>
+
+    <!-- Status colors -->
+    <color name="status_in_progress">#F9A825</color>
+    <color name="status_resolved">#2E7D32</color>
+    <color name="status_urgent">#D32F2F</color>
 
 </resources>

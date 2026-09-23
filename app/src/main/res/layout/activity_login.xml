@@ -4,84 +4,198 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/sisonke_background">
+    android:fillViewport="true"
+    android:background="@color/sisonke_white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:padding="24dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:text="SISONKE"
-            android:textColor="@color/sisonke_primary"
-            android:textSize="36sp"
-            android:textStyle="bold" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Community Safety"
-            android:textSize="16sp"
-            android:textColor="@color/sisonke_grey" />
-
-        <TextView
+        <!-- Card -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="Welcome Back"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:textColor="@color/sisonke_black" />
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_rounded"
+            android:elevation="4dp"
+            android:padding="24dp">
 
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:padding="16dp" />
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_launcher_foreground"
+                android:contentDescription="@string/app_name" />
 
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="16dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:text="WELCOME BACK!"
+                android:textColor="@color/sisonke_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:text="LOGIN"
-            android:textAllCaps="false" />
+            <!-- Username / Email -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
 
-        <TextView
-            android:id="@+id/tvForgotPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Forgot Password?"
-            android:textColor="@color/sisonke_primary"
-            android:textSize="15sp" />
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_input_field"
+                    android:drawableStart="@drawable/ic_person_white"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Username or Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textColorHint="@color/sisonke_grey"
+                    android:textSize="14sp"
+                    android:singleLine="true" />
+            </FrameLayout>
 
-        <TextView
-            android:id="@+id/tvRegister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="Don't have an account? Register"
-            android:textColor="@color/sisonke_primary"
-            android:textSize="16sp" />
+            <!-- Password -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_input_field"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Your Password"
+                    android:inputType="textPassword"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textColorHint="@color/sisonke_grey"
+                    android:textSize="14sp"
+                    android:singleLine="true" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:text="Forgot Password?"
+                android:textColor="@color/sisonke_grey"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_button_primary"
+                android:text="LOGIN"
+                android:textAllCaps="true"
+                android:textColor="@color/sisonke_white"
+                android:textStyle="bold" />
+
+            <!-- Divider -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/sisonke_border" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Or continue with"
+                    android:textColor="@color/sisonke_grey"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/sisonke_border" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/btnGoogle"
+                    android:layout_width="52dp"
+                    android:layout_height="44dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_button_outline"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_google"
+                        android:contentDescription="Google" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnApple"
+                    android:layout_width="52dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_button_outline"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_apple"
+                        android:contentDescription="Apple" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Don't have an account? Register"
+                android:textColor="@color/sisonke_grey"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.4" />
 
     </LinearLayout>
 
