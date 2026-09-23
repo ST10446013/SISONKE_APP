@@ -11,6 +11,7 @@ import com.example.sisonke_app.emergency.EmergencyActivity
 import com.example.sisonke_app.incidents.IncidentActivity
 import com.example.sisonke_app.map.CrimeMapActivity
 import com.example.sisonke_app.municipal.MunicipalActivity
+import com.example.sisonke_app.nav.BottomNavHelper
 import com.example.sisonke_app.settings.SettingsActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -24,6 +25,8 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_dashboard)
+
+        BottomNavHelper.setup(this, R.id.nav_home)
 
         auth = FirebaseAuth.getInstance()
         firestore = FirebaseFirestore.getInstance()
@@ -101,12 +104,9 @@ class DashboardActivity : AppCompatActivity() {
 
             auth.signOut()
 
-            startActivity(
-                Intent(
-                    this,
-                    LoginActivity::class.java
-                )
-            )
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
 
             finish()
         }
