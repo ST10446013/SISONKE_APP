@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="incident_categories">
+        <item>Diefstal</item>
+        <item>Inbraak</item>
+        <item>Roof</item>
+        <item>Verdagte aktiwiteit</item>
+        <item>Aanranding</item>
+        <item>Ander</item>
+    </string-array>
+    <string-array name="municipal_categories">
+        <item>Water en Sanitasie</item>
+        <item>Elektrisiteitsonderbreking</item>
+        <item>Slaggat / Padskade</item>
+        <item>Onwettige storting</item>
+        <item>Straatligfout</item>
+        <item>Ander</item>
+    </string-array>
+</resources>

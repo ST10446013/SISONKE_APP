@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="incident_categories">
+        <item>Theft</item>
+        <item>Burglary</item>
+        <item>Robbery</item>
+        <item>Suspicious Activity</item>
+        <item>Assault</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="municipal_categories">
+        <item>Water and Sanitation</item>
+        <item>Electricity Outage</item>
+        <item>Pothole / Road Damage</item>
+        <item>Illegal Dumping</item>
+        <item>Streetlight Fault</item>
+        <item>Other</item>
+    </string-array>
+</resources>

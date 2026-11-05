@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="incident_categories">
+        <item>Ukweba</item>
+        <item>Ukugqekeza</item>
+        <item>Ukugebenga</item>
+        <item>Umsebenzi osolisayo</item>
+        <item>Ukuhlasela</item>
+        <item>Okunye</item>
+    </string-array>
+    <string-array name="municipal_categories">
+        <item>Amanzi Nokuthuthwa Kwendle</item>
+        <item>Ukucima kukagesi</item>
+        <item>Umgodi emgwaqweni / Umonakalo womgwaqo</item>
+        <item>Ukulahlwa kukadoti ngokungemthetho</item>
+        <item>Ukungasebenzi kwesibani somgwaqo</item>
+        <item>Okunye</item>
+    </string-array>
+</resources>
