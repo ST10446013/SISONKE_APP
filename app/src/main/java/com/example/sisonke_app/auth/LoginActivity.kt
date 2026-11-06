@@ -2,11 +2,17 @@ package com.example.sisonke_app.auth
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.AdapterView
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import android.widget.LinearLayout
+import android.widget.Spinner
+import android.widget.ArrayAdapter
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.os.LocaleListCompat
 import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -60,6 +66,8 @@ class LoginActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+        setupLanguageSpinner()
+
         etEmail = findViewById(R.id.etEmail)
         etPassword = findViewById(R.id.etPassword)
         etEmail.setText(intent.getStringExtra("registered_email") ?: "")
@@ -87,6 +95,36 @@ class LoginActivity : AppCompatActivity() {
 
         findViewById<LinearLayout>(R.id.btnGoogle).setOnClickListener {
             startGoogleSignIn()
+        }
+    }
+
+    private fun setupLanguageSpinner() {
+        val languages = arrayOf("English", "isiZulu", "Afrikaans")
+        val spinner = findViewById<Spinner>(R.id.spinnerLanguage)
+        spinner.adapter = ArrayAdapter(
+            this,
+            R.layout.simple_spinner_dropdown_item,
+            languages
+        )
+        val prefs = getSharedPreferences("sisonke_prefs", MODE_PRIVATE)
+        val savedLanguage = prefs.getString("preferred_language", "English") ?: "English"
+        val savedIndex = languages.indexOf(savedLanguage).coerceAtLeast(0)
+        spinner.setSelection(savedIndex, false)
+
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onNothingSelected(parent: AdapterView<*>?) = Unit
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                val selected = languages[position]
+                if (savedLanguage == selected) return
+                prefs.edit().putString("preferred_language", selected).apply()
+                val languageTag = when (selected) {
+                    "isiZulu" -> "zu"
+                    "Afrikaans" -> "af"
+                    else -> "en"
+                }
+                AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(languageTag))
+                recreate()
+            }
         }
     }
 

@@ -46,6 +46,15 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
+            <Spinner
+                android:id="@+id/spinnerLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_input_field"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
             <!-- Username / Email -->
             <FrameLayout
                 android:layout_width="match_parent"
