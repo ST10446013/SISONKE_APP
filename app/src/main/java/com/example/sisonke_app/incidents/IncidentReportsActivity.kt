@@ -3,14 +3,18 @@ package com.example.sisonke_app.incidents
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sisonke_app.R
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.Query
+import okhttp3.OkHttpClient
+import okhttp3.Request
 import java.text.DateFormat
 import java.util.Date
 

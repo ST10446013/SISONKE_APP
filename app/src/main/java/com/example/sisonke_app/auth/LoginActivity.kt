@@ -103,7 +103,7 @@ class LoginActivity : AppCompatActivity() {
         val spinner = findViewById<Spinner>(R.id.spinnerLanguage)
         spinner.adapter = ArrayAdapter(
             this,
-            R.layout.simple_spinner_dropdown_item,
+            android.R.layout.simple_spinner_dropdown_item,
             languages
         )
         val prefs = getSharedPreferences("sisonke_prefs", MODE_PRIVATE)
